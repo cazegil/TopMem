@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/app_background"
+    tools:context="pt.isec.a9805004.topmem.MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_iniciar"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="onClickMenu" />
+
+    <Button
+        android:id="@+id/btnConfigs"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_configs"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="onClickMenu" />
+</LinearLayout>
