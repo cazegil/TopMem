@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,21 +12,40 @@
     tools:context="pt.isec.a9805004.topmem.MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnIniciar"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:background="@drawable/btn_iniciar"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:onClick="onClickMenu" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:background="@drawable/btn_state_settings"
+            android:clickable="true"
+            android:onClick="onClickMenu"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btnConfigs"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:background="@drawable/btn_configs"
+        android:id="@+id/btnIniciar"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_state_iniciar"
         android:layout_gravity="center_horizontal"
         android:clickable="true"
-        android:onClick="onClickMenu" />
+        android:onClick="onClickMenu"
+        android:layout_marginTop="100dp"/>
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_state_sair"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="onClickMenu"
+        android:layout_marginTop="50dp"/>
+
 </LinearLayout>
