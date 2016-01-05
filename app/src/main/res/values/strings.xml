@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TopMem</string>
+    <string name="btn_multiplayer">Multiplayer</string>
+    <string name="txt_start">Start</string>
+    <string name="txt_stop">Stop</string>
+
 </resources>

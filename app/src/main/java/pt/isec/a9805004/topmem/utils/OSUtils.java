@@ -2,6 +2,7 @@ package pt.isec.a9805004.topmem.utils;
 
 import android.content.res.AssetManager;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -27,10 +28,15 @@ public final class OSUtils {
      * @return Properties The properties
      */
     public static Properties loadPropertiesFileFromAsset(final AssetManager assetManager, String fileName) throws IOException {
-        InputStream inputStream = assetManager.open(fileName);
-        Properties properties = new Properties();
-        properties.load(inputStream);
-        Log.d(TAG, "Property configurations loaded | file: {0}.", fileName);
-        return properties;
+        try {
+            InputStream inputStream = assetManager.open(fileName);
+            Properties properties = new Properties();
+            properties.load(inputStream);
+            Log.d(TAG, "Property configurations loaded | file: {0}.", fileName);
+            return properties;
+        } catch (FileNotFoundException e) {
+            Log.e(TAG, e, "Property not loaded");
+        }
+        return null;
     }
 }

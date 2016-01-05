@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/app_background"
-    tools:context="pt.isec.a9805004.topmem.MainActivity"
-    android:orientation="vertical">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/app_background"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context="pt.isec.a9805004.topmem.MainActivity">
 
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right">
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnSettings"
-            android:layout_height="60dp"
             android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
             android:background="@drawable/btn_state_settings"
             android:clickable="true"
-            android:onClick="onClickMenu"
-            android:layout_gravity="right" />
+            android:onClick="onClickMenu"/>
 
     </LinearLayout>
 
@@ -33,19 +34,31 @@
         android:id="@+id/btnIniciar"
         android:layout_width="240dp"
         android:layout_height="60dp"
-        android:background="@drawable/btn_state_iniciar"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_state_iniciar"
+        android:clickable="true"
+        android:onClick="onClickMenu"/>
+
+    <Button
+        android:id="@+id/btnMultiplayer"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/holo_red_light"
         android:clickable="true"
         android:onClick="onClickMenu"
-        android:layout_marginTop="100dp"/>
+        android:text="@string/btn_multiplayer"/>
+
     <Button
         android:id="@+id/btnSair"
         android:layout_width="240dp"
         android:layout_height="60dp"
-        android:background="@drawable/btn_state_sair"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_state_sair"
         android:clickable="true"
-        android:onClick="onClickMenu"
-        android:layout_marginTop="50dp"/>
+        android:onClick="onClickMenu"/>
 
 </LinearLayout>

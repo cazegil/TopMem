@@ -29,8 +29,7 @@ public class TopMemApp extends Application {
         super.onCreate();
         context = getApplicationContext();
         sInstance = this;
-        EventManager.register(this);
-        initializeManagers();
+        //        initializeManagers();
     }
 
     /**
@@ -39,7 +38,6 @@ public class TopMemApp extends Application {
     public static void shutdown() {
         shutdownManagers();
         sIsInitialized = false;
-        EventManager.unregister(TopMemApp.sInstance);
     }
 
     public static boolean isIsInitialized() {
